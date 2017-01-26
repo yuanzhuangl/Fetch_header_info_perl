@@ -1,0 +1,36 @@
+Question:
+   Write and submit a Perl program which reads the standard input and prints out content of all header tags,
+   such as: <H1>. . . </H1>, <h2>. . . </h2>, and so on. 
+
+
+Requirments:
+  -  It should print out the content of all HTML tags starting with the letter ‘H’ or ‘h’ and followed by one
+     or more digits.  
+  - The tags should be matched in a case-insensitive way, however when printing, you should always print an
+    uppercase ‘H’.
+  - You should match only the cases where opening and closing tags are on the same line. 
+  - It is possible to have multiple tags in the same line, but you can assume that they do not overlap. 
+  - You should also assume that an opening or closing tag may contain additional attributes such as <h4 attr=1>
+    but those will not be printed in the output.
+  - The program must not print any unspecified output; it should simply read the standard input (using the <> operator), 
+    and produce tags and their content in the standard output, one tag per line.
+   
+Example:
+
+input file:
+This is <h1>a test</h1>.
+This line has no tags.
+<H2>Multiple tags</h2> in a <h3>Line.</h3>
+<h4 atr=1>Attributes included</h4>
+and <h5a>not this one</h5a>
+<h1>so</h1>
+<h1 > on.... </H1>
+
+
+output file:
+<H1>a test</H1>
+<H2>Multiple tags</H2>
+<H3>Line.</H3>
+<H4>Attributes included</H4>
+<H1>so</H1>
+<H1> on.... </H1>
